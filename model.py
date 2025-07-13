@@ -14,7 +14,7 @@ output_file = 'predictions.csv'
 file_line_counts = {}  # 用來記錄每個檔案已讀取的行數
 
 # 資料夾路徑
-folder_path = r"C:\Users\user\OneDrive\桌面\immediate_data\data"
+folder_path = r"D:\temperature\immediate_data\data"
 
 # 構建滑動窗口方法
 def create_val_sequences(data, time_steps=3):
