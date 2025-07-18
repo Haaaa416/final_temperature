@@ -116,16 +116,35 @@ D:\temperature\predict_web\num.py中模擬資料可以進行預測，可替代&n
 
 &nbsp;&nbsp;&nbsp;(1)&nbsp;開啟xampp中 **'apach'** **'mysql'**
 
-&nbsp;&nbsp;&nbsp;(2)&nbsp;執行 **'web.py'** 
+&nbsp;&nbsp;&nbsp;(2)&nbsp;執行 **'web.py'** (前提可以在終端機執行&bnsp;conda指令），如果不行看第三點，如果可以在專端機執行以下
 
 ```
-conda ac
+conda activate tycccc
+```
+&nbsp;&nbsp;&nbsp;&nbsp;把終端機路徑cd到與 **'web.py'**相同位指（\predict_web），執行以下指令
+```
+python web.py 
+```
+&nbsp;&nbsp;&nbsp;&nbsp;透過 **'numbers.txt'**虛擬資料對網頁是否有讀取到檔案以及儲存到資料庫
+
+&nbsp;&nbsp;&nbsp;(3)&nbsp;在conda 終端執行以下
+
+```
+conda init powershell
 ```
 
+&nbsp;&nbsp;&nbsp;&nbsp;到powershall檢查是否有以下情況
+
+```
+(base)C:/User/user
+```
+&nbsp;&nbsp;&nbsp;&nbsp;若有請活化虛擬環境（conda)
 
 ### 3.**'sketch_jul12a是否可以讓紅外線切換(邏輯正確)'** 
 
+&nbsp;&nbsp;&nbsp;(1)分為arduino與python程式碼兩種
+
 ### 4.**'一整套流程串起來'**
 
-
+### 顧名思義ㄏㄏ 
 # START
