@@ -108,6 +108,10 @@ D:\temperature\predict_web\num.py中模擬資料可以進行預測，可替代&n
 
 ### 1.**'4CH_EEG專案是否可以運行'** 
 
+&nbsp;&nbsp;&nbsp;(1)&nbsp;更改Signalform.cs這段程式碼中路徑位置（immediate_data），看想放哪吧，有很多段都要改。
+
+&nbsp;&nbsp;&nbsp;(2)&nbsp;執行Signalform.cs程式碼，步驟可以抄上面的，檢查是否有產**'baseline'** **'data'**中的txt檔案
+
 ### 2.**'predict_web是否可以預測以及儲存資料給資料庫'** 
 
 ### 3.**'sketch_jul12a是否可以讓紅外線切換(邏輯正確)'** 
