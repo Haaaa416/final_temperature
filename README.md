@@ -60,25 +60,58 @@ round(notch_EMG.Coefficients, 6)
 
 &nbsp;&nbsp;&nbsp;(1)&nbsp;D:\temperature\immediate_data&nbsp;分為&nbsp;**'baseline'** 與 **'data'**
 
-&nbsp;&nbsp;&nbsp;(2)&nbsp;baseline開始後每秒產生一個檔案(250個點),為原始訊號？(忘ㄌ),取幾筆出來？
+&nbsp;&nbsp;&nbsp;(2)&nbsp;baseline又分為&nbsp;**'CH1'** 與 **'CH2'**
 
+&nbsp;&nbsp;&nbsp;(3)&nbsp;baseline開始後每秒產生一個檔案,為計算後(STFT的結果)有129行對應到(SX)，只取第6個到第21個檔案取平均進行後續運算
 
-&nbsp;&nbsp;&nbsp;(3)&nbsp;
+&nbsp;&nbsp;&nbsp;(4)&nbsp;data裡面是開始收照光的資料後每秒資料被baseline平均除以後進行計算STFT取特定頻段出來，如下圖範圍
+
+<img width="937" height="294" alt="image" src="https://github.com/user-attachments/assets/0f01d272-741b-4e6d-9a40-a3590ab8cea0" />
 
 ## 3.&nbsp;predict_web(網頁&nbsp;;物理治療師使用介面)
-&nbsp;&nbsp;&nbsp;(1)&nbsp;D:\temperature\predict_web&nbsp;分為如下
+
+&nbsp;&nbsp;&nbsp;(1)&nbsp;D:\temperature\predict_web&nbsp;分為很多檔案
+
+&nbsp;&nbsp;&nbsp;(2)&nbsp;D:\temperature\predict_web\templates\index.html &nbsp;&nbsp;是物理治療師使用介面的網頁設計(包含html、css、js)
+
+&nbsp;&nbsp;&nbsp;(3)&nbsp;D:\temperature\predict_web\1.py &nbsp;&nbsp;是額外檢查計算收到的資料狀況
+
+&nbsp;&nbsp;&nbsp;(4)&nbsp;D:\temperature\predict_web\num.py &nbsp;&nbsp;是模擬被照光後處理過的資料，介於[0 1]之間，產生numbers.txt檔案當模擬資料
+
+&nbsp;&nbsp;&nbsp;(5)&nbsp;D:\temperature\predict_web\*.h5 &nbsp;&nbsp;是訓練過後的不同部位以及全部的部位一起訓練後的模型參數
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =>&nbsp;&nbsp; 依序為 **左手、右手、雙手、左肩、右肩、後背、後腰、左大腿、右大腿、左小腿、右小腿**
+
+&nbsp;&nbsp;&nbsp;(6)&nbsp;D:\temperature\predict_web\predictions.csv &nbsp;&nbsp;是web.py執行後讀取資料進行訓練後的結果
+
+&nbsp;&nbsp;&nbsp;(7)&nbsp;D:\temperature\predict_web\web.py &nbsp;&nbsp;是**物理治療師使用介面**最主要的程式，透過讀取/templates/index.html的結果傳到此程式碼進行後端計算、畫圖、將資料存到資料庫
+
 ## 4.&nbsp;sketch_jul12a(python與c&nbsp;;arduino與繼電器控制檔案)
+
 &nbsp;&nbsp;&nbsp;(1)&nbsp;D:\temperature\sketch_jul12a&nbsp;分為&nbsp;**'code.py'** 與 **'sketch_jul12a.ino'**
+
+&nbsp;&nbsp;&nbsp;(2)&nbsp;D:\temperature\sketch_jul12a\code.py &nbsp;是python程式碼控制紅外線的程式，arduino得到資料後控制繼電器進行切換
+
+&nbsp;&nbsp;&nbsp;(3)&nbsp;D:\temperature\sketch_jul12a\sketch_jul12a.ino &nbsp;是arduino程式碼控制繼電器的程式，同時會把程式碼寫入檔案裡
+
 ## 5.&nbsp;model.py(python&nbsp;;檢查數值預測)
-D:\temperature\immediate_data\data
+
+D:\temperature\immediate_data\data，檢查計算收到的資料狀況
+
 ## 6.&nbsp;numbers.txt(python&nbsp;;模擬資料)
+
 D:\temperature\predict_web\num.py中模擬資料可以進行預測，可替代&nbsp;'D:\temperature\immediate_data\'
 
 # TEST
+
 ## 分為四種測試&nbsp; 
+
 ### 1.**'4CH_EEG專案是否可以運行'** 
+
 ### 2.**'predict_web是否可以預測以及儲存資料給資料庫'** 
+
 ### 3.**'sketch_jul12a是否可以讓紅外線切換(邏輯正確)'** 
+
 ### 4.**'一整套流程串起來'**
 
 
