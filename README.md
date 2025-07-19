@@ -133,12 +133,16 @@ python web.py
 conda init powershell
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;到powershall檢查是否有以下情況
+&nbsp;&nbsp;&nbsp;&nbsp;到powershall檢查是否有以下情況，沒有的話就自己加油處理一下
 
 ```
 (base)C:/User/user
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;若有請活化虛擬環境（conda)
+
+```
+conda activate tycccc
+```
 
 ### 3.**'sketch_jul12a是否可以讓紅外線切換(邏輯正確)'** 
 
@@ -146,5 +150,19 @@ conda init powershell
 
 ### 4.**'一整套流程串起來'**
 
-### 顧名思義ㄏㄏ 
+&nbsp;&nbsp;&nbsp;(1)首先要改/perdict_web/web.py中讀取txt的路徑到/immediate_data/data
+
+&nbsp;&nbsp;&nbsp;(2)開啟xampp
+
+&nbsp;&nbsp;&nbsp;(3)接上arduino以及紅外線
+
+&nbsp;&nbsp;&nbsp;(4)執行4CH_EEG中Signalform.cs檔案，目前應該掛了，先用我給的另一個版本（群組上
+
+&nbsp;&nbsp;&nbsp;(5)先收baseline五分鐘，**start** 與 **stop**
+
+&nbsp;&nbsp;&nbsp;(6)執行web.py，點擊網頁連結填資料確定
+
+&nbsp;&nbsp;&nbsp;(7)回到Signalform.cs產生的視窗，點擊 **start** 回到網頁看圖，結束後按結束以及儲存
+
+
 # START
