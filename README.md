@@ -106,7 +106,7 @@ D:\temperature\predict_web\num.py中模擬資料可以進行預測，可替代&n
 
 ## 分為四種測試&nbsp; 
 
-### 1.**'4CH_EEG專案是否可以運行'** 
+### 1.**4CH_EEG專案是否可以運行** 
 
 &nbsp;&nbsp;&nbsp;(1)&nbsp;更改Signalform.cs這段程式碼中路徑位置（immediate_data），看想放哪吧，有很多段都要改。
 
@@ -144,11 +144,11 @@ conda init powershell
 conda activate tycccc
 ```
 
-### 3.**'sketch_jul12a是否可以讓紅外線切換(邏輯正確)'** 
+### 3.**sketch_jul12a是否可以讓紅外線切換(邏輯正確)** 
 
 &nbsp;&nbsp;&nbsp;(1)分為arduino與python程式碼兩種
 
-### 4.**'一整套流程串起來'**
+### 4.**一整套流程串起來**
 
 &nbsp;&nbsp;&nbsp;(1)首先要改/perdict_web/web.py中讀取txt的路徑到/immediate_data/data
 
